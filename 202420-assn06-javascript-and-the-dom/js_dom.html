@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript and the Document Object Model (DOM)</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="js_dom.css"/>
+  
+</head>
+<body>
+
+<div class="container">
+
+  <h1>JavaScript and the Document Object Model (DOM)</h1>
+
+  <p>For each problem, write JavaScript code <strong>in the linked <code>js_dom.js</code> file</strong>. Use comments to indicate the code for each problem, like:</p>
+
+  <pre>// Solution for problem 1</pre>
+
+  <p>The only edits that you should make to this HTML file is to to add JavaScript-friendly tags (e.g. <code>div</code>, <code>span</code>) 
+    and attributes (e.g. <code>class</code> and <code>id</code>). <strong>Do not put inline code in this file!</strong>.</p>
+
+  <p>Keep in mind that the linked JavaScript page runs top-to-bottom <em>as soon as it is retrieved</em>, not when the page is done loading.</p>
+
+  <p>There are many ways to accomplish tasks in JavaScript in the browser. Some rules of thumb: simple is good, clear is better,
+    reasonable small changes to the html/css shouldn't break your code.</p>
+
+  <p>Commit and push to submit your assignment.</p>
+
+  <h2>Using JavaScript...</h2>
+  
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 1</h4>
+    <p>Immediately on load, replace the text below with "I hate you, Bob."</p>
+  </div>
+  
+  <div class="panel-body">
+    <p id="wishes">Happy Birthday, Bob!</p>
+  </div>
+</div>  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 2</h4>
+    <p>Immediately on load, change the image below to this one: <code>https://pbs.twimg.com/media/DnH2kP2XcAAv7et?format=jpg&name=small</code></p>
+    <p><em>Do not change all the images on the page, only this one! Adding <code>id</code> and <code>class</code> tags to things is part of connecting JavaScript to the DOM.</em></p>
+  </div>
+  
+  <div class="panel-body">
+    <p><img id ="duck" src="https://img.buzzfeed.com/buzzfeed-static/static/campaign_images/webdr01/2013/5/29/17/tumblr-really-loves-this-duckling-1-28612-1369861410-6_big.jpg"/></p>
+  </div>
+</div>  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 3</h4>
+    <p>Immediately on load, make the three images below only 300 pixels wide.</p>
+    <p><em>Don't put separate ids on the three images for this one, you can do better.</em></p>
+  </div>
+  
+  <div class="panel-body">
+    <p><img class ="thumbnail" src="https://stoppestinfo.com/images/news/2017/02/how-to-get-rid-of-gophers-what-is-more-efficient-gopher-traps-poisons-or-repellents-gopher-control-which-methods-are-approved-by-scientists.jpg"/></p>
+    <p><img class ="thumbnail" src="https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/ferret-teet-and-dental-care-for-ferrets-thinkstock-177817907.jpg"/></p>
+    <p><img class ="thumbnail" src="https://static01.nyt.com/images/2019/03/19/science/09TB-BADGER2/09TB-BADGER2-superJumbo.jpg"/></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p>For the problems below, figure out what event(s) you need to respond to in each case.
+    This page may be helpful: <a target="_blank" href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML DOM Events</a>.</p>
+    <p>You may need more than one event handler per problem.</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 4</h4>
+    <p>When the button below is pushed, make the text next to it red and much bigger.</p>
+  </div>
+  
+  <div class="panel-body">
+    <p><button class="btn btn-primary">Click Me</button> AHHHHHH!</p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 5</h4>
+    <p>Make the hidden message below appear whenever the mouse is over the big green circle (and disappear otherwise).</p>
+  </div>
+  
+  <div class="panel-body">
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ski_trail_rating_symbol-green_circle.svg/240px-Ski_trail_rating_symbol-green_circle.svg.png">
+      <span class="hidden">Soylent Green is people!</span></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 6</h4>
+    <p>Echo whatever the user types (letter-by-letter as they type it!) in the first textbox into the second textbox.</p>
+  </div>
+  
+  <div class="panel-body">
+    <input type="textbox">
+    <input type="textbox">
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 7</h4>
+    <p>When the user finishes typing in the textbox and leaves it (hits tab or clicks elsewhere), replace what they wrote with "HAHA".</p>
+  </div>
+  
+  <div class="panel-body">
+    <input type="textbox" id="haha-textbox">
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 8</h4>
+    <p>Make the checkbox enable/disable the drop-down select box.</p>
+  </div>
+  
+  <div class="panel-body">
+    <input type="checkbox" checked>Enable</input>
+    <select>
+      <option value="0">Blue</option>
+      <option value="1">3 lbs of cornmeal</option>
+      <option value="2">Cats</option>
+    </select>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 9</h4>
+    <p>When you click on the number below, make it count down from 5 to 0, one step per second.</p>
+    <p><em>hint: setTimeout (recursive) and setInterval are useful here.</em></p>
+  </div>
+  
+  <div class="panel-body">
+    <h1>5</h1>
+  </div>
+</div>
+
+</div>
+
+<script src="js_dom.js"></script>
+
+</body>
+</html>

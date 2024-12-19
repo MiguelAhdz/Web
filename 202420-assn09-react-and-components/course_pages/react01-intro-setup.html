@@ -1,0 +1,138 @@
+<html>
+
+<head>
+
+<title>CSCI 3342</title>
+
+<link rel="stylesheet" type="text/css" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<style>
+img {border: 1px solid black; width: 600px;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="lab">
+
+<div class="container">
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <h2>Client-Side JavaScript Frameworks (React)</h2>
+
+    <ul class="list-group">
+      <a class="list-group-item active" style="text-decoration: none" href="react01-intro-setup.html">Part 1: Intro & Setup, JSX</a>
+      <a class="list-group-item" style="text-decoration: none" href="react02-components.html">Part 2: Components</a>
+    </ul>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    Part 1 is due Tue, 11/7 by class time.
+  </div>
+
+  <div class="panel-body">
+    Part 2 is due Thu, 11/9, midnight.
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <p><em>You must be logged into Blackboard for the videos below to show!</em></p>
+
+    <h3>Intro & Setup</h3>
+
+    <iframe src="https://utrgv.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=839a3b00-de79-4fe7-a0b9-addb00e29f8a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+    <h3>Assignment Next Step</h3>
+
+    <p><em>Following along with the video example, start a new React project.</em></p>
+
+    <pre>https://classroom.github.com/a/GIv6Xt5e</pre>
+
+    <ul>
+      <li>clone the repository (only contains the <em>very</em> important <code>.gitignore</code> and a html mockup)</li>
+      <li>use <code>create-react-app</code> to create your react project inside the repo</li>
+      <li>test that you can see the default App</li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <h3>JSX</h3>
+
+    <iframe src="https://utrgv.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=66a260cc-384a-4e36-b386-addb00e2e978&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all"
+    height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+
+    <h3>Assignment Next Step</h3>
+
+    <p><em>Using the video example as reference, practice writing conditional and loop expressions in JSX</em></p>
+
+    <ul>
+      <li>
+        <p>
+          replace the default <code>App</code> function in <code>src/App.js</code> with the below code
+          (make up some data for your friends' name/description/comment):
+        </p>
+        <pre>function App() {
+
+  const friends = [
+    {name: "", description: "", comment: "", ditched: false},
+    {name: "", description: "", comment: "", ditched: false},
+    {name: "", description: "", comment: "", ditched: true},
+    {name: "", description: "", comment: "", ditched: false}
+  ];
+          
+  return (
+    &lt;>
+      &lt;p>Update Me&lt;/p>
+    &lt;/>
+  );        
+}</pre>
+      </li>
+
+      <li>
+        <p>
+          Write JSX code in the <code>return</code> to use the <code>friends</code> data and make the
+          page look like this (with the four friends you defined instead):
+        </p>
+        <div><img src="Screenshot-jsx-practice.png"/></div>
+        <ul>
+          <li>
+            The html you need is in <code>mockups/mockup-jsx-practice.html</code>
+            <ul>
+              <li>Copy the html from the <code>body</code> into your <code>return</code> function</li>
+              <li>Copy the bootstrap link from that mockup into the <code>&lt;head></code> of your
+                <code>public/index.html</code> file to include bootstrap</li>
+            </ul>
+          </li>
+          <li>JSX uses expressions rather than control statements. Use <code>map</code> instead of
+          a for loop.</li>
+        </ul>
+      </li>
+      <li>Add conditionals to turn the name red and omit the <code>Ditch</code> button for friends
+        where <code>ditched</code> is true (use the ternary if expression, not an if control statement)
+      </li>
+    </ul>
+
+    <p>When it's done, make a copy of <code>src/App.js</code> named <code>src/App-practice.js</code> to
+      preserve that work for grading.
+    </p>
+
+  </div>
+</div>
+
+</body>
+</html>

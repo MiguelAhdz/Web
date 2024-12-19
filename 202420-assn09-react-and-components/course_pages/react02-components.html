@@ -1,0 +1,157 @@
+<html>
+
+<head>
+
+<title>CSCI 3342</title>
+
+<link rel="stylesheet" type="text/css" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<style>
+img {border: 1px solid black; width: 600px;}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="lab">
+
+<div class="container">
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <h2>Client-Side JavaScript Frameworks (React)</h2>
+
+    <ul class="list-group">
+      <a class="list-group-item" style="text-decoration: none" href="react01-intro-setup.html">Part 1: Intro & Setup, JSX</a>
+      <a class="list-group-item active" style="text-decoration: none" href="react02-components.html">Part 2: Components</a>
+    </ul>
+  </div>
+</div>
+
+<!-- <div class="panel panel-default">
+  <div class="panel-body">
+    Part 2 is due Thu, 11/10, midnight.
+  </div>
+</div> -->
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Assignment</h3>
+
+    <p>For this assignment, we are going to create a simple schedule builder for sorting out how many sections of different classes we need to offer and who will teach them.
+      We won't have any data connection yet, so our state is purely client-side (erased on reload).</p>
+
+    <p>The complete app will work as shown below. But this assignment is <strong>only the first part</strong> of the app. The next assignment will complete the interface that
+      you see below, and the final assignment will make the server data connection.</p>
+
+    <iframe src="https://utrgv.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=814f94b5-361f-4929-9e46-ae6a00f86cf4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <h3>Components</h3>
+
+    <iframe src="https://utrgv.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=16665deb-0440-46dc-8320-addb00e2b981&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all"
+    height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+    <h3>Assignment Next Step</h3>
+    
+    <p><em>Following the video example, create a component representing each <code>Course</code> and display three of them.</em></p>
+
+    <img src="screenshot-01-course.png" style="width:auto" />
+
+    <h4>Separate out a Course component</h4>
+    <ul>
+      <li>
+        add a <code>Course</code> component to your <code>App.js</code> file
+        <ul>
+          <li>the <code>Course</code> represents one of those rows above</li>
+          <li>use the HTML from <code>mockups/mockup01.html</code> (pictured above), just as in part1</li>
+          <li>
+            <strong>hardcode</strong> the following data in <code>Course</code> and use it as the state:
+            <pre>
+  const name = "1370";
+  const sections = [
+    {id: 1, instructor: "Ayati"},
+    {id: 2, instructor: "Kim"}
+  ];</pre>
+          </li>
+        </ul>
+      </li>
+      <li>have your <code>App</code> display that component three times (as if there were three different courses)</li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <h3>Component Composition (passing props)</h3>
+
+    <iframe src="https://utrgv.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=21619f3a-74f7-48c3-8e06-addb00e2ca1f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=true&interactivity=all"
+    height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+    <h3>Assignment Next Step</h3>
+
+    <p><em>Pass properties into your Course</em></p>
+
+    <ul>
+      <li><strong>hardcode</strong> the following data in <code>App</code>:
+        <pre>
+  const courses = [
+    {name: "1370", sections: [
+      {id: 1, instructor: "Ayati"},
+      {id: 2, instructor: "Kim"}
+    ]},
+    {name: "3329", sections: [
+      {id: 3, instructor: "Gao"},
+      {id: 4, instructor: "Tomai"},
+      {id: 5, instructor: "Tomai"}
+    ]},
+    {name: "3340", sections: [
+      {id: 6, instructor: "Schweller"},
+      {id: 7, instructor: "Wylie"}
+    ]}
+  ];</pre>
+      </li>
+      <li>update your <code>App</code> component to iterate over that list creating <code>Course</code> components</li>
+      <li>update your <code>Course</code> component to accept <code>name</code> and <code>sections</code> as properties (props)</li>
+      <li>remember to put a <code>key</code> attribute on each <code>Course</code></li>
+    </ul>
+
+    <h3>Normalize the data</h3>
+
+    <p>As we've seen before, storing a simple name for each instructor in the database is limited. More likely, we will have a faculty table and store ids.</p>
+
+    <ul>
+      <li>include this hardcoded list of faculty names and ids in your <code>App</code>
+        <pre>
+  const instructors = [
+    {id: 12, name: 'Ayati'},
+    {id: 7, name: 'Gao'},
+    {id: 2, name: 'Kim'},
+    {id: 23, name: 'Schweller'},
+    {id: 31, name: 'Tomai'},
+    {id: 3, name: 'Wylie'}
+  ];</pre>
+      </li>
+      <li>replace the faculty names in the <code>courses</code> data with ids</li>
+      <li>update your <code>Course</code> component to accept the <code>instructors</code> list as an additional prop</li>
+      <li>update your <code>Course</code> component to look up instructors names based on the ids in the course data
+        <p><em>hint: JavaScript arrays have a very nice <code>find</code> method</em></p>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
