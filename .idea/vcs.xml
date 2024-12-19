@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn01-html-and-css" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn02-javascript-exercises" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn03-server-side-shopping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn04-database" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn05-session-and-security" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn06-javascript-and-the-dom" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn07-ajax" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn08-ajax-part-ii" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn09-react-and-components" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn10-react-state" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn11-react-data" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn12-orm-lab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-assn13-server-push-lab" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-final" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/202420-midterm-dry-run" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/midterm" vcs="Git" />
+  </component>
+</project>
